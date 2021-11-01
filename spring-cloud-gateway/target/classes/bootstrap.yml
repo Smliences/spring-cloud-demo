@@ -1,0 +1,23 @@
+spring:
+  application:
+    name: spring-cloud-gateway
+  cloud:
+    gateway:
+      discovery:
+        locator:
+          enabled: true
+      routes:
+        - id: hello_route
+          uri: http://www.baidu.com
+          predicates:
+            - Path=/baidu/**
+    nacos:
+      # 配置中心设置
+      config:
+        file-extension: yml
+        server-addr: '127.0.0.1:8848'
+
+      # 注册中心设置
+      discovery:
+        server-addr: '127.0.0.1:8848'
+

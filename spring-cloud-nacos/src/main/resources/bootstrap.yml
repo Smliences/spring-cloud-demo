@@ -1,0 +1,13 @@
+spring:
+  application:
+    name: spring-cloud-nacos
+  cloud:
+    nacos:
+      # 配置中心设置
+      config:
+        file-extension: yml
+        server-addr: '127.0.0.1:8848'
+        shared-dataids: test1.yml
+      # 注册中心设置
+      discovery:
+        server-addr: '127.0.0.1:8848'
