@@ -1,8 +1,7 @@
 package com.sml.springcloudorderservice.service.impl;
 
+import com.sml.springcloudcommon.redis.RedisService;
 import com.sml.springcloudorderservice.service.OrderService;
-import org.springframework.beans.factory.annotation.Autowired;
-import org.springframework.data.redis.core.RedisTemplate;
 import org.springframework.stereotype.Service;
 
 import javax.annotation.Resource;
@@ -18,11 +17,16 @@ import javax.annotation.Resource;
 public class OrderServiceImpl implements OrderService {
 
     @Resource
-    private RedisTemplate redisTemplate;
+    private RedisService redisService;
 
 
     @Override
-    public String get() {
-        return null;
+    public String get(String key) {
+        return String.valueOf(redisService.getRedisValueByKey(key));
+    }
+
+    @Override
+    public void set(String key, String value) {
+        redisService.setRedisValue(key,value);
     }
 }

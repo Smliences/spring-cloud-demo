@@ -8,5 +8,7 @@ package com.sml.springcloudorderservice.service;
 
 
 public interface OrderService {
-    String get();
+    String get(String key);
+
+    void set(String key, String value);
 }
