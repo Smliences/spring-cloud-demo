@@ -7,10 +7,15 @@ spring:
         locator:
           enabled: true
       routes:
-        - id: hello_route
-          uri: http://www.baidu.com
+#        - id: hello_route
+#          uri: http://localhost:8021
+#          predicates:
+#            - Path=/order/**
+
+        - id: order_service
+          uri: lb://spring-cloud-order-service
           predicates:
-            - Path=/baidu/**
+            - Path=/order/**
     nacos:
       # 配置中心设置
       config:

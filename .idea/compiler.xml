@@ -6,6 +6,7 @@
         <sourceOutputDir name="target/generated-sources/annotations" />
         <sourceTestOutputDir name="target/generated-test-sources/test-annotations" />
         <outputRelativeToContentRoot value="true" />
+        <module name="spring-cloud-config" />
         <module name="spring-cloud-gateway" />
         <module name="spring-cloud-order-service" />
         <module name="spring-cloud-nacos" />

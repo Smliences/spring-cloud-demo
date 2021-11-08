@@ -13,6 +13,7 @@
         <module>spring-cloud-gateway</module>
         <module>spring-cloud-nacos</module>
         <module>spring-cloud-order-service</module>
+        <module>spring-cloud-config</module>
     </modules>
 
     <properties>

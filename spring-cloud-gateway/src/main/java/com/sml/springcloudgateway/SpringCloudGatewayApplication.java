@@ -15,10 +15,5 @@ public class SpringCloudGatewayApplication {
         SpringApplication.run(SpringCloudGatewayApplication.class, args);
     }
 
-    @Bean
-    RouteLocator routeLocator(RouteLocatorBuilder routeLocatorBuilder){
-        return routeLocatorBuilder.routes().
-                route("hello_route",j -> j.path("/baidu/**").uri("http://www.baidu.com"))
-                .build();
-    }
+
 }
